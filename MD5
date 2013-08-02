@@ -1,0 +1,16 @@
+56b2f1d6d6168e3b0e3e5425b955db7a *DESCRIPTION
+4f011098e120593cce2a43a2fdb40035 *NAMESPACE
+095790485ae11e9b71b4b11a73fa540a *R/RImpala.R
+8b111ebca28e39ec879e2e8c49035a35 *R/onLoad.R
+2d578aa85aa91a7ffe705fb2af7b05b8 *inst/java/RImpala-1.0.jar
+e7ebe6128a4d3d5aee22f1deafc4c06d *man/RImpala.Rd
+2604c5400adfbf096d9ad97448808fe5 *man/RImpala_close.Rd
+b5cc36e81b8eb1e8f691e419c321bf0e *man/RImpala_connect.Rd
+2d3b804fca9e4646270883ddad5663a7 *man/RImpala_describe.Rd
+612380d0ea56086dfa78bd4f30d5a108 *man/RImpala_init.Rd
+8559285252b7ec41d61798af76d8e378 *man/RImpala_invalidate.Rd
+8343ec47581432ff4e35d672d9bc160b *man/RImpala_query.Rd
+ec9a4eeb06283d752c4a1fc9f9fcb0ba *man/RImpala_refresh.Rd
+e19262669e13e3ffb780a13dbad01d20 *man/RImpala_showdatabases.Rd
+174905f72b6901810e57b98fac3d0f45 *man/RImpala_showtables.Rd
+de849bbb95516810b159422b8acf227c *man/RImpala_usedatabase.Rd
