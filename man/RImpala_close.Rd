@@ -13,8 +13,9 @@ rimpala.close()
 }
 
 \author{
-Austin, Sachin, Vikas
-}
+Austin Chungath Vincent \email{austin.cv@mu-sigma.com},\cr
+Vikas Raguttahalli \email{vikas.r@mu-sigma.com},\cr
+Sachin Sudarshana \email{sachin.sudarshana@mu-sigma.com}}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
