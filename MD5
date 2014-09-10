@@ -1,8 +1,13 @@
-8f150b73596e34813179cd76d5021d43 *DESCRIPTION
+cf448f52e82b11668790a38d774bc728 *DESCRIPTION
 4f011098e120593cce2a43a2fdb40035 *NAMESPACE
 c2ead5e65d06f88655cde1ca74ca6da4 *R/RImpala.R
 8b111ebca28e39ec879e2e8c49035a35 *R/onLoad.R
-07df94596193d019f79267c16b17b26e *inst/java/RImpala-1.0.jar
+6092f168c4c2dc6b1f8eedc1d71ba91d *inst/java/RImpala-1.0.jar
+6ada9c17cc63479e6bbda06b2d9da834 *java/README.md
+f65f7a32b12dddd959e8e0063e85f34c *java/build.sh
+c61ed5e66fc75aa6d9288d60b60ef23e *java/pom.xml
+aea28560706bcd5760de27e901023ca6 *java/src/main/java/com/musigma/ird/bigdata/RImpala.java
+39e21893e59678e26e2247efe4c16a7e *java/src/main/resources/log4j.properties
 71b7b22c9e47f475e849f9dcc0a369d9 *man/RImpala.Rd
 1b0d0066386a7284905d40c0d2af7912 *man/RImpala_close.Rd
 1c9f68ec36a77f60a8d10449cede4b5d *man/RImpala_connect.Rd
