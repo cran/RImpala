@@ -368,4 +368,23 @@ public class RImpala {
 				return null;  
                  
         }
+        
+        public static int update(String Q) throws SQLException{
+            try {
+                Statement stmt = con.createStatement();
+                return stmt.executeUpdate(Q);
+            } catch (SQLException e) {
+                System.out.println("Error SQL: "+e.getMessage());
+            } catch (Exception e) {
+				 //e.printStackTrace();
+                if(!con.isValid(2)) {
+                    System.out.println("Connection has probably not been established");
+                    System.out.println("Please use rimpala.connect(IP= ,port= )");
+                }
+				System.out.println("Error: "+e.getMessage());
+            } finally {
+                
+            }
+            return 0;
+        }
 }

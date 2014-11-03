@@ -1,5 +1,6 @@
 import("rJava")
 export("rimpala.query")
+export("rimpala.update")
 export("rimpala.init")
 export("rimpala.connect")
 export("rimpala.close")

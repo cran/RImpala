@@ -68,6 +68,12 @@ rimpala.query <-function (Q="show tables") {
 
 }
 
+rimpala.update <- function (Q) {
+    impalaObj = .jnew("com.musigma.ird.bigdata.RImpala")
+    str(impalaObj)
+    return(impalaObj$update(Q))
+}
+
 rimpala.connect <- function(IP="localhost",port="21050",principal="noSasl"){
   impalaObj = .jnew("com.musigma.ird.bigdata.RImpala")
 
