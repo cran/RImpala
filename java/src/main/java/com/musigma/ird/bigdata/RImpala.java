@@ -15,6 +15,7 @@ public class RImpala {
         private static String CONNECTION_URL;
 
         private static final String JDBC_DRIVER_NAME = "org.apache.hive.jdbc.HiveDriver";
+        private static final String JDBC_IMPALA_DRIVER_NAME = "com.cloudera.impala.jdbc4.Driver";
        
         private static Connection con = null;
 
@@ -45,6 +46,35 @@ public class RImpala {
 			}
         	        	
         }
+
+	public static boolean connect(String IP, String port,
+			String principal, String db, String krbRealm, String krbHostFQDN,
+			String krbServiceName) {
+
+                if (krbRealm != null && krbHostFQDN != null && krbServiceName != null) {
+			CONNECTION_URL = "jdbc:impala://" + IP + ':' + port + "/" + db
+					+ ";AuthMech=1;KrbRealm=" + krbRealm + ";KrbHostFQDN="
+					+ krbHostFQDN + ";KrbServiceName=" + krbServiceName;
+		} else {
+			CONNECTION_URL = "jdbc:impala://" + IP + ':' + port + "/;" + principal;
+		}
+                
+		try {
+			Class.forName(JDBC_IMPALA_DRIVER_NAME);
+			con = DriverManager.getConnection(CONNECTION_URL);
+			return true;
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error: " + e.getMessage());
+			return false;
+
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error: " + e.getMessage());
+			return false;
+		}
+	}
        
         public static boolean close(){
         	try {

@@ -68,7 +68,7 @@ rimpala.query <-function (Q="show tables") {
 
 }
 
-rimpala.connect <- function(IP="localhost",port="21050",principal="noSasl"){
+rimpala.connect <- function(IP="localhost",port="21050",principal="noSasl",db="default", krbRealm=NULL, krbHostFQDN=NULL,krbServiceName=NULL){
   impalaObj = .jnew("com.musigma.ird.bigdata.RImpala")
 
   #building the connection string
@@ -79,8 +79,7 @@ rimpala.connect <- function(IP="localhost",port="21050",principal="noSasl"){
   } else  {
     principal = paste("principal=",principal,sep="");
   }
-  
-  return(impalaObj$connect(IP,port,principal))
+  return(impalaObj$connect(IP,port,principal,db,krbRealm,krbHostFQDN,krbServiceName))
   
 }
 
