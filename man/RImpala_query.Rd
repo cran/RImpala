@@ -9,9 +9,16 @@
 \item{Q}{
 The Query to be executed on Impala. The default query is show tables.
 }
+\item{isDDL}{
+Flag Parameter to indicate if the query is DDL - "true" / "false" ( Default: false)
+}
+\item{fetchSize}{
+Set the Number of rows to be retrieved with each Impala roundtrip call (Default : 10000)
+}
+
 }
 \usage{
-rimpala.query(Q="show tables")
+rimpala.query(Q="show tables",isDDL="false",fetchSize="10000")
 }
 \value{
 The result of the Query is returned into a dataframe if the Query is valid and does not have any errors.
@@ -29,7 +36,9 @@ Sachin Sudarshana \email{sachin.sudarshana@mu-sigma.com}}
 library("RImpala")
 rimpala.init()
 rimpala.connect(IP="127.0.0.1",port="21050")
-res = rimpala.query("Select * from sample_table")
+res = rimpala.query(Q="Select * from sample_table")
+res = rimpala.query(Q="Select * from sample_table",fetchSize="10000")
+rimpala.query(Q="drop table sample_table",isDDL="true")
 }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
