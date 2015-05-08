@@ -25,17 +25,19 @@ To use this package you must also have access to a Hadoop cluster running Cloude
 1. Find the ip of the machine and the port where the Impala service is running.
 2. Find the location where you have unziped the JDBC jars in the above section.
 2. Launch R
-3. <code>
+3. Add run the code below:
+ <code>
 	library("RImpala")
 	rimpala.init(libs="/path/to/JDBC/jars/")
 	rimpala.connect(IP="localhost",port="21050",principal="noSasl")
 	result = rimpala.query("your query");
-	</code>
-by default rimpala.init() searches "/usr/lib/impala" for the JDBC jars.
+ </code>	
+By default rimpala.init() searches "/usr/lib/impala" for the JDBC jars.
 
 4. Use the below command for connection with kerberos security
-rimpala.connect(IP="127.0.0.1",port="21050",db="default",krbRealm="EXAMPLE.COM",
-                krbHostFQDN="impala.example.com",krbServiceName="impala")
+<code>
+ rimpala.connect(IP="127.0.0.1",port="21050",db="default",krbRealm="EXAMPLE.COM" ,               krbHostFQDN="impala.example.com",krbServiceName="impala")
+</code>
 ###
 Here are links to more information on Cloudera Impala:
 
@@ -52,5 +54,5 @@ Here are links to more information on Cloudera Impala:
 - R (>= 2.7.0)
 - rJava (>= 0.5-0)
 - Cloudera Impala (>= 2-5-16 JDBC 4 Version)[Cloudera JDBC driver jars](http://downloads.cloudera.com/connectors/impala_jdbc_2.5.16.1018.zip)
-
+- Please use Impala JDBC 4 Version and do not use Impala JDBC 4.1 version
 

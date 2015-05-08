@@ -13,7 +13,12 @@ public class RImpala {
        
        
         private static String CONNECTION_URL;
-
+       
+        /* 
+         * The use of the hive driver is deprecated.
+         * Use it only if the impala driver fails to work.
+         */
+        
         private static final String JDBC_DRIVER_NAME = "org.apache.hive.jdbc.HiveDriver";
         private static final String JDBC_IMPALA_DRIVER_NAME = "com.cloudera.impala.jdbc4.Driver";
        
